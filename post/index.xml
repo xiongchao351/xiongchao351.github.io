@@ -6,10 +6,44 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2020 14:51:09 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 15:06:35 +0800</lastBuildDate>
     
 	<atom:link href="https://xiongchao351.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://xiongchao351.github.io/post/blog1/</link>
+      <pubDate>Thu, 16 Jul 2020 15:06:35 +0800</pubDate>
+      
+      <guid>https://xiongchao351.github.io/post/blog1/</guid>
+      <description>Linux常用命令 一、基础指令 1.ls指令 语法1：ls
+语法2：ls -la
+语法3：ls -lh
+2.pwd指令： print working directory
+3.cd命令 4.mkdir指令 指令：mkdir （make directory 创建目录）
+语法：# mkdir 路径（可以是文件夹名称，也可以是包含名称的一个完整路径）
+注意：ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色表示文件，绿色的表示其权限为拥有所有权限
+语法2：mkdir -p 路径 （多层目录创建）
+语法3：mkdir 路径1 路径2 路径3 &amp;hellip;
+5.touch指令 作用：创建文件
+语法：touch 文件路径（可以是直接的文件名，也可以是路径）
+6.cp指令 指令：cp copy
+作用：复制文件/文件夹到指定的位置
+语法：cp 被复制的文档路径 文档被复制到的路径
+注意：当使用cp命令复制文件夹的时候需要添加选项“-r&amp;rdquo;，否则将会被略过（-r 表示递归复制）
+7.mv指令 指令：mv （move，移动，剪切）
+作用：移动文档到新的位置
+语法：mv 需要移动的文档路径 需要保存的位置路径
+linux中重命名命令也是mv
+8.rm命令 指令：rm （remove）
+作用：移除/删除文档
+语法：rm 选项 需要移除的文档路径
+选项：-f：表示force（强制）
+​	-r：删除文件夹时使用，一般使用-rf，不用频繁确认，可以实现同时删除多个
+rm -f linux* 表示删除当前路径下的全部以linux开头的文件 9.vim命令 指令：vim （vim是一款文本编辑器）
+语法：vim 文件的路径</description>
+    </item>
     
     <item>
       <title>Tensorflow学习笔记一</title>

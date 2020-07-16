@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Linux常用命令 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://xiongchao351.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux常用命令"/>
+<meta name="twitter:description" content="Linux常用命令 一、基础指令 1.ls指令 语法1：ls
+语法2：ls -la
+语法3：ls -lh
+2.pwd指令： print working directory
+3.cd命令 4.mkdir指令 指令：mkdir （make directory 创建目录）
+语法：# mkdir 路径（可以是文件夹名称，也可以是包含名称的一个完整路径）
+注意：ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色表示文件，绿色的表示其权限为拥有所有权限
+语法2：mkdir -p 路径 （多层目录创建）
+语法3：mkdir 路径1 路径2 路径3 &hellip;
+5.touch指令 作用：创建文件
+语法：touch 文件路径（可以是直接的文件名，也可以是路径）
+6.cp指令 指令：cp copy
+作用：复制文件/文件夹到指定的位置
+语法：cp 被复制的文档路径 文档被复制到的路径
+注意：当使用cp命令复制文件夹的时候需要添加选项“-r&rdquo;，否则将会被略过（-r 表示递归复制）
+7.mv指令 指令：mv （move，移动，剪切）
+作用：移动文档到新的位置
+语法：mv 需要移动的文档路径 需要保存的位置路径
+linux中重命名命令也是mv
+8.rm命令 指令：rm （remove）
+作用：移除/删除文档
+语法：rm 选项 需要移除的文档路径
+选项：-f：表示force（强制）
+​	-r：删除文件夹时使用，一般使用-rf，不用频繁确认，可以实现同时删除多个
+rm -f linux* 表示删除当前路径下的全部以linux开头的文件 9.vim命令 指令：vim （vim是一款文本编辑器）
+语法：vim 文件的路径"/>
+
+    <meta property="og:title" content="Linux常用命令" />
+<meta property="og:description" content="Linux常用命令 一、基础指令 1.ls指令 语法1：ls
+语法2：ls -la
+语法3：ls -lh
+2.pwd指令： print working directory
+3.cd命令 4.mkdir指令 指令：mkdir （make directory 创建目录）
+语法：# mkdir 路径（可以是文件夹名称，也可以是包含名称的一个完整路径）
+注意：ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色表示文件，绿色的表示其权限为拥有所有权限
+语法2：mkdir -p 路径 （多层目录创建）
+语法3：mkdir 路径1 路径2 路径3 &hellip;
+5.touch指令 作用：创建文件
+语法：touch 文件路径（可以是直接的文件名，也可以是路径）
+6.cp指令 指令：cp copy
+作用：复制文件/文件夹到指定的位置
+语法：cp 被复制的文档路径 文档被复制到的路径
+注意：当使用cp命令复制文件夹的时候需要添加选项“-r&rdquo;，否则将会被略过（-r 表示递归复制）
+7.mv指令 指令：mv （move，移动，剪切）
+作用：移动文档到新的位置
+语法：mv 需要移动的文档路径 需要保存的位置路径
+linux中重命名命令也是mv
+8.rm命令 指令：rm （remove）
+作用：移除/删除文档
+语法：rm 选项 需要移除的文档路径
+选项：-f：表示force（强制）
+​	-r：删除文件夹时使用，一般使用-rf，不用频繁确认，可以实现同时删除多个
+rm -f linux* 表示删除当前路径下的全部以linux开头的文件 9.vim命令 指令：vim （vim是一款文本编辑器）
+语法：vim 文件的路径" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongchao351.github.io/post/blog1/" />
+<meta property="article:published_time" content="2020-07-16T15:06:35+08:00" />
+<meta property="article:modified_time" content="2020-07-16T15:06:35+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://xiongchao351.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Linux常用命令</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 16, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="linux常用命令">Linux常用命令</h2>
+<h2 id="一基础指令">一、基础指令</h2>
+<h3 id="1ls指令">1.ls指令</h3>
+<p>语法1：ls</p>
+<p>语法2：ls -la</p>
+<p>语法3：ls -lh</p>
+<h3 id="2pwd指令">2.pwd指令：</h3>
+<p>print working directory</p>
+<h3 id="3cd命令">3.cd命令</h3>
+<h3 id="4mkdir指令">4.mkdir指令</h3>
+<p>指令：mkdir （make directory 创建目录）</p>
+<p>语法：# mkdir 路径（可以是文件夹名称，也可以是包含名称的一个完整路径）</p>
+<p><strong>注意：ls列出的结果颜色说明，其中蓝色的名称表示文件夹，黑色表示文件，绿色的表示其权限为拥有所有权限</strong></p>
+<p>语法2：mkdir -p 路径 （多层目录创建）</p>
+<p>语法3：mkdir 路径1 路径2 路径3 &hellip;</p>
+<h3 id="5touch指令">5.touch指令</h3>
+<p>作用：创建文件</p>
+<p>语法：touch 文件路径（可以是直接的文件名，也可以是路径）</p>
+<h3 id="6cp指令">6.cp指令</h3>
+<p>指令：cp copy</p>
+<p>作用：复制文件/文件夹到指定的位置</p>
+<p>语法：cp 被复制的文档路径 文档被复制到的路径</p>
+<p><strong>注意：当使用cp命令复制文件夹的时候需要添加选项“-r&rdquo;，否则将会被略过（-r 表示递归复制）</strong></p>
+<h3 id="7mv指令">7.mv指令</h3>
+<p>指令：mv （move，移动，剪切）</p>
+<p>作用：移动文档到新的位置</p>
+<p>语法：mv 需要移动的文档路径  需要保存的位置路径</p>
+<p>linux中重命名命令也是mv</p>
+<h3 id="8rm命令">8.rm命令</h3>
+<p>指令：rm （remove）</p>
+<p>作用：移除/删除文档</p>
+<p>语法：rm 选项 需要移除的文档路径</p>
+<p>选项：-f：表示force（强制）</p>
+<p>​			-r：删除文件夹时使用，一般使用-rf，不用频繁确认，可以实现同时删除多个</p>
+<pre><code>rm -f linux*
+表示删除当前路径下的全部以linux开头的文件
+</code></pre><h3 id="9vim命令">9.vim命令</h3>
+<p>指令：vim （vim是一款文本编辑器）</p>
+<p>语法：vim 文件的路径</p>
+<p>作用：打开一个文件（可以不存在）</p>
+<p>退出：shift 加: 输入q 按下回车即可</p>
+<h3 id="10输出重定向">10.输出重定向</h3>
+<p>一般的命令的输出都会显示在终端中，有时候需要将一些命令的结果保存到文件中进行后续的分析/统计，这时候需要输出重定向计数</p>
+<pre><code>&gt;：覆盖输出，会覆盖掉原先的文件内容
+&gt;&gt;：追加输出，不会覆盖原始文件内容，会在原始内容末尾继续添加
+语法：正常执行的指令 &gt;/&gt;&gt; 文件的路径 （文件可以不存在）
+</code></pre><h3 id="11cat指令">11.cat指令</h3>
+<p>作用1：cat有<strong>直接</strong>打开一个文件的功能</p>
+<p>语法： cat 文件的路径</p>
+<p>作用2：cat还可以对文件进行合并</p>
+<p>语法： cat 待合并的文件路径1 待合并的文件路径2 &hellip; &gt; 合并之后的文件路径</p>
+<h2 id="二进阶指令">二、进阶指令</h2>
+<h3 id="1df指令">1.df指令</h3>
+<p>作用：查看磁盘的空间</p>
+<p>语法：df （-h） -h表示以可读性较高的形式显示</p>
+<h3 id="2free指令">2.free指令</h3>
+<p>作用：查看内存使用情况</p>
+<p>语法：free -m 表示以mb为单位进行查看</p>
+<p><img src="C:%5CUsers%5Cxiongchao%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1590135154441.png" alt="1590135154441"></p>
+<h3 id="3head指令">3.head指令</h3>
+<p>作用：查看一个文件的前n行，如果不指定默认显示前10行</p>
+<p>语法：head -n</p>
+<h3 id="4tail指令">4.tail指令</h3>
+<p>作用：查看一个文件的魔n行，默认显示后10行</p>
+<p>语法：tail -n</p>
+<p>作用2：可以通过tail指令查看一个文件的动态变化（变化的内容不能是用户手动添加的）</p>
+<p>语法：tail -F 文件路径</p>
+<p>一般用于查日志</p>
+<h3 id="5less命令">5.less命令</h3>
+<p>作用：查看文件，以较少的内容进行输出，按下辅助功能键（数字+回车、空格+上下方向键）查看更多</p>
+<p>语法：less 要查看的文件路径</p>
+<h3 id="6wc指令">6.wc指令</h3>
+<p>作用：用于统计文件内容信息（包括行数、单词书、字节数）</p>
+<p>语法：wc -lwc 需要统计的文件路径</p>
+<p>​			-l：行数 	-w：单词数（按空格区分）	-c：字节数</p>
+<h3 id="u7date命令u"><!-- raw HTML omitted -->7.date命令<!-- raw HTML omitted --></h3>
+<p>作用：表示操作时间（读取，设置）</p>
+<p>语法1：date</p>
+<p>语法2：date +%F （等价于date ”+%Y-%m-%d“）</p>
+<p>语法3：date ”+%F  %T“</p>
+<p>语法4：获取之前或之后的某个时间（备份）</p>
+<p>​			# date -d ”-1day“ ”+%Y-%m-%d %H:%M:%S“</p>
+<h3 id="8cal指令">8.cal指令</h3>
+<p>作用：操作日历的</p>
+<p>语法1：cal 等价于cal -1 直接输出当前月份的日历</p>
+<p>语法2：cal -3 表示输出上个月+本月+下个月的日历</p>
+<p>语法3：cal -y 输出某一年份的日历</p>
+<h3 id="9clearctrll指令">9.clear/ctrl+L指令</h3>
+<p>作用：清楚终端中已经存在的命令和结果</p>
+<p>语法：clear 或者快捷键：ctrl+l</p>
+<p><strong>注意：该命令不是真的清楚之前的信息，而是把以前的信息放到上面</strong></p>
+<h3 id="10u管道u">10.<!-- raw HTML omitted -->管道<!-- raw HTML omitted --></h3>
+<p><!-- raw HTML omitted --><strong>管道符：|</strong><!-- raw HTML omitted --></p>
+<p>作用：一般可以用于“过滤”，“特殊”，“扩展处理”</p>
+<p>语法：不能单独使用们必须配合之前所讲的指令一起使用，作用主要是辅助作用</p>
+<pre><code>案例：需要通过管道查询出根目录下包含“y”字母的文档名称
+# ls / |grep y
+以管道为分界线，前面的命令有个输出，前面的输出就是后面的输入，然后再过滤，最后再输出
+grep指令主要用于过滤
+
+案例：扩展处理，统计某个目录下的文档的总个数
+# ls / |wc -l
+</code></pre><h2 id="三高级指令">三、高级指令</h2>
+<h3 id="1hostname指令">1.hostname指令</h3>
+<p>作用：操作服务器的主机名（读取）</p>
+<p>语法：# hostname	含义：输出完整的主机名</p>
+<p>​			# hostname -f 	含义：输出当前主机名中的FQDN(全限定域名)</p>
+<h3 id="2id指令">2.id指令</h3>
+<p>作用：查看一个用户的一些基本信息（包含了用户id，用户组id，附加组id&hellip;），该指令如果不指定用户则默认当前用户</p>
+<p>语法1：id		默认显示当前执行该命令的用户的基本信息</p>
+<p>语法2：id  用户名 	（显示指定用户的基本信息）</p>
+<p>可以在/etc/passwd下验证用户信息</p>
+<p>再/etc/group下验证用户组信息</p>
+<h3 id="3whoami指令">3.whoami指令</h3>
+<p>作用：显示当前登录的用户名，一般用于shell脚本，用于获取当前的用户名方便记录日志</p>
+<h3 id="4ups--ef-指令u">4.<!-- raw HTML omitted -->ps -ef 指令<!-- raw HTML omitted --></h3>
+<p>指令：ps</p>
+<p>作用：主要是查看服务器的进程详细信息</p>
+<p>选项： -e 等价于“-A”  	表示列出全部的进程</p>
+<p>​			-f   	显示全部的列（显示全字段）</p>
+<h3 id="5top指令">5.top指令</h3>
+<p>作用：查看服务器的进程占的资源</p>
+<p>语法：进入命令：top   	（动态显示）</p>
+<p>​			退出：按q</p>
+<p>​			快捷键：M 表示将结果按照内存（MEM）从高到低进行降序排序</p>
+<p>​							P  表示将结果按照cpu使用率从高到低进行降序排序</p>
+<p>​							1    当服务器又多个cpu的时候可以使用1来切换是否展示各个cpu的详细信息</p>
+<h3 id="6du--sh指令">6.du -sh指令</h3>
+<p>作用：查看目录的真实大小</p>
+<p>语法：du  -sh  路径</p>
+<p>选项含义：-s   summaries    只显示汇总的大小</p>
+<p>​					-h    表示以可读性较高的形式显示</p>
+<h3 id="7find指令">7.find指令</h3>
+<p>作用：用于查找文件</p>
+<p>语法：find  路径范围 选项  选项的值</p>
+<p>选项：-name   按照文档名称进行搜索（支持模糊搜索）</p>
+<p>​			-type：按照文档的类型进行搜索（文档类型：“-”表示文件，再使用find时用f替换；“d“表示文件夹）</p>
+<h3 id="8service指令">8.service指令</h3>
+<p>作用：用于控制一些软件服务的启动/停止/重启</p>
+<p>语法：service 服务名    start/stop/restart</p>
+<h3 id="9kill指令">9.kill指令</h3>
+<p>作用：杀死进程</p>
+<p>语法1：kill  进程id		配合ps指令使用</p>
+<p>语法2：killall    进程名称</p>
+<h3 id="10ifconfig指令">10ifconfig指令</h3>
+<p>作用：用于操作网卡相关的指令</p>
+<p>简单语法：ifconfig     获取网卡信息</p>
+<h3 id="11reboot指令">11.reboot指令</h3>
+<p>作用：重新启动计算机</p>
+<p>语法1：reboot	重启</p>
+<p>语法2：reboot  -w 	模拟重启，但是不重启</p>
+<h3 id="12shutdown指令">12.shutdown指令</h3>
+<p>作用：关机</p>
+<h3 id="13uptime指令">13.uptime指令</h3>
+<p>作用：输出计算机的持续在线时间</p>
+<h3 id="14uname指令">14.uname指令</h3>
+<p>作用：获取计算机操作系统相关信息</p>
+<p>语法1：uname  	获取操作系统的类型</p>
+<p>语法2： uname  -a	获取全部的系统信息</p>
+<h3 id="15netstat--tnlp指令">15.netstat -tnlp指令</h3>
+<p>作用：查看网络连接状态</p>
+<p>语法：netstat -tnlp</p>
+<p>​			-t:表示只列出tcp协议的连接</p>
+<p>​			-n：表示将地址从字母组合转化成ip地址，将协议转化成端口号来显示</p>
+<p>​			-l：表示过滤出”state“列中其值为LISTEN的连接</p>
+<p>​			-p：表示显示发起连接的进程pid和进程名称</p>
+<h3 id="16man指令">16.man指令</h3>
+<p>作用：manual 手册</p>
+<p>语法：man 命令 （退出按下q键）</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

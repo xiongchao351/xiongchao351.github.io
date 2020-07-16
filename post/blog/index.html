@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Tensorflow学习笔记一 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://xiongchao351.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tensorflow学习笔记一"/>
+<meta name="twitter:description" content="一、创建tensor 1.from numpy, list 2.zeros,ones 3.fill 4.random 5.constant import tensorflow as tf import numpy as np # from numpy a = tf.convert_to_tensor(np.ones([2,3])) b = tf.convert_to_tensor(np.zeros([2,3])) # or list c = tf.convert_to_tensor([1,2]) # zeros ones 传入shape d = tf.zeros([2,3]) e = tf.ones([3,3,2]) e = tf.zeros_like(d) # fill tf.fill(shape,value) t = tf.fill([2,3],3) # random 标准正态分布 截断的正态分布 t = tf.random.normal([2,2],mean=1,stddev=1) tf.random.normal([2,2]) t = tf.random.truncated_normal([2,2],mean=0,stddev=1) # uniform 随机分布函数 # tf.random.uniform((6, 6), minval=low,maxval=high,dtype=tf.float32)))返回6*6的矩阵，产生于low和high之间，产生的值是均匀分布的。 tf.random.uniform((6,6),minval=1,maxval=2) # constant tf."/>
+
+    <meta property="og:title" content="Tensorflow学习笔记一" />
+<meta property="og:description" content="一、创建tensor 1.from numpy, list 2.zeros,ones 3.fill 4.random 5.constant import tensorflow as tf import numpy as np # from numpy a = tf.convert_to_tensor(np.ones([2,3])) b = tf.convert_to_tensor(np.zeros([2,3])) # or list c = tf.convert_to_tensor([1,2]) # zeros ones 传入shape d = tf.zeros([2,3]) e = tf.ones([3,3,2]) e = tf.zeros_like(d) # fill tf.fill(shape,value) t = tf.fill([2,3],3) # random 标准正态分布 截断的正态分布 t = tf.random.normal([2,2],mean=1,stddev=1) tf.random.normal([2,2]) t = tf.random.truncated_normal([2,2],mean=0,stddev=1) # uniform 随机分布函数 # tf.random.uniform((6, 6), minval=low,maxval=high,dtype=tf.float32)))返回6*6的矩阵，产生于low和high之间，产生的值是均匀分布的。 tf.random.uniform((6,6),minval=1,maxval=2) # constant tf." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiongchao351.github.io/post/blog/" />
+<meta property="article:published_time" content="2020-07-16T14:51:09+08:00" />
+<meta property="article:modified_time" content="2020-07-16T14:51:09+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://xiongchao351.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Tensorflow学习笔记一</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 16, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h1 id="一创建tensor">一、创建tensor</h1>
+<h3 id="1from-numpy-list">1.from numpy, list</h3>
+<h3 id="2zerosones">2.zeros,ones</h3>
+<h3 id="3fill">3.fill</h3>
+<h3 id="4random">4.random</h3>
+<h3 id="5constant">5.constant</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#75715e"># from numpy</span>
+a <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>convert_to_tensor(np<span style="color:#f92672">.</span>ones([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]))
+b <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>convert_to_tensor(np<span style="color:#f92672">.</span>zeros([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]))
+<span style="color:#75715e">#  or list</span>
+c <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>convert_to_tensor([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>])
+
+<span style="color:#75715e"># zeros ones 传入shape</span>
+d <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>zeros([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+e <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>ones([<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>])
+e <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>zeros_like(d)
+
+<span style="color:#75715e"># fill tf.fill(shape,value)</span>
+t <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>fill([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>],<span style="color:#ae81ff">3</span>)
+
+<span style="color:#75715e"># random 标准正态分布 截断的正态分布</span>
+t <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>],mean<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,stddev<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>])
+t <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>truncated_normal([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>],mean<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,stddev<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+<span style="color:#75715e"># uniform 随机分布函数</span>
+<span style="color:#75715e"># tf.random.uniform((6, 6), minval=low,maxval=high,dtype=tf.float32)))返回6*6的矩阵，产生于low和high之间，产生的值是均匀分布的。</span>
+tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform((<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">6</span>),minval<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,maxval<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+
+<span style="color:#75715e"># constant</span>
+tf<span style="color:#f92672">.</span>constant(<span style="color:#ae81ff">1</span>)
+tf<span style="color:#f92672">.</span>constant([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>])
+
+
+
+</code></pre></div><h2 id="二索引与切片">二、索引与切片</h2>
+<h3 id="1基础索引">1.基础索引</h3>
+<h3 id="2和numpy类似的">2.和numpy类似的</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 基础索引</span>
+a <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>ones([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>])
+a[<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (5,3)</span>
+
+<span style="color:#75715e"># numpy_like</span>
+a <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal([<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">3</span>])
+a[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (28,28,3)</span>
+a[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (28,3)</span>
+
+<span style="color:#75715e"># start:end start:end:step</span>
+a[:<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (2,28,28,3)</span>
+a[:,:,:,<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (4,28,28)  == a[...,0]</span>
+a[:,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">28</span>:<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">28</span>:<span style="color:#ae81ff">2</span>,:]<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (4,14,14,3)</span>
+</code></pre></div><h3 id="3gather函数">3.gather函数</h3>
+<p>tf.gather(params,indices,axis=0 )</p>
+<p>从params的axis维根据indices的参数值获取切片</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data:[classes,students,grades] <span style="color:#75715e"># [4,35,8]</span>
+    
+<span style="color:#75715e"># 按轴0将最后两个班级切出来</span>
+tf<span style="color:#f92672">.</span>gather(data,indices<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#75715e"># shape (2,35,8)</span>
+tf<span style="color:#f92672">.</span>gather(data,indices<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">0</span>],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+
+tf<span style="color:#f92672">.</span>gather(data,axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,indices<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>]) <span style="color:#75715e"># shape (4,4,8)</span>
+tf<span style="color:#f92672">.</span>gather(data,axis<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>,indices<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]) <span style="color:#75715e"># shape(4,35,4)</span>
+</code></pre></div><h3 id="4gather_nd函数">4.gather_nd函数</h3>
+<p>函数原型,<code>nd</code>的意思是可以收集<code>n dimension</code>的<code>tensor</code></p>
+<p>gather_nd(params,indices,name=none)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data:[classes,students,grades] <span style="color:#75715e"># [4,35,8]</span>
+    
+tf<span style="color:#f92672">.</span>gather_nd(a,[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (35,8)</span>
+tf<span style="color:#f92672">.</span>gather_nd(a,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>])<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (8)</span>
+tf<span style="color:#f92672">.</span>gather_nd(a,[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>])<span style="color:#f92672">.</span>shape <span style="color:#75715e"># ([])</span>
+
+tf<span style="color:#f92672">.</span>gather_nd(a,[[<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>]])<span style="color:#f92672">.</span>shape <span style="color:#75715e"># (2,35,8)</span>
+tf<span style="color:#f92672">.</span>gather_nd(a,[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>]])<span style="color:#f92672">.</span>shape <span style="color:#75715e">#(2,8)</span>
+
+tf<span style="color:#f92672">.</span>gather_nd(a,[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>]]) <span style="color:#75715e"># ([3])</span>
+tf<span style="color:#f92672">.</span>gather_nd(a,[[[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>]]]) <span style="color:#75715e"># ([1,3])</span>
+</code></pre></div><h3 id="5boolean_mask">5.boolean_mask</h3>
+<p>将输入的数组挑出想要的数据输出</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tf<span style="color:#f92672">.</span>boolean_mask(
+    tensor,
+    mask,
+    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;boolean_mask&#39;</span>,
+    axis<span style="color:#f92672">=</span>None
+)
+
+
+a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+a <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>ones([<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">3</span>])
+mask <span style="color:#f92672">=</span> [True,False,True,False]
+tf<span style="color:#f92672">.</span>boolean_mask(a,mask) <span style="color:#75715e"># [1,3]</span>
+tf<span style="color:#f92672">.</span>boolean_mask(a,mask<span style="color:#f92672">=</span>[True,True,False],axis<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) <span style="color:#75715e"># shape ([4,28,28,2])</span>
+
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
